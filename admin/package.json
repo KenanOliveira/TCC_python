@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "angular": "^1.8.2",
+    "angular-route": "^1.8.2",
+    "angular-sanitize": "^1.8.2",
+    "angular-storage": "^0.0.15",
+    "bootstrap": "^5.0.1",
+    "ngstorage": "^0.3.11"
+  }
+}
