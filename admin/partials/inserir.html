@@ -1,0 +1,31 @@
+<title>Inserir Vídeo</title>
+
+<div class="alert alert-danger alert-dismissible fade show" ng-show="erro" role="alert">
+    <strong>{{erro}}</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<div class="alert alert-success alert-dismissible fade show" ng-show="mensagem" role="alert">
+    <strong>{{mensagem}}</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<form class="form-control dados" ng-submit="inserirVideo()" style="width: 50%;">
+    <div class="mb-3">
+        <label class="form-label">Título</label>
+        <input ng-model='titulo' class="form-control" type="text">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Descrição</label>
+        <input ng-model='descricao' class="form-control" type="text">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Link</label>
+        <input ng-model='link' class="form-control" type="text">
+    </div>
+    <div class="mb-4">
+        <label class="form-label">Tags</label>
+        <input ng-model='tags' class="form-control" type="text">
+    </div>
+    <button type="submit" class="btn btn-success form-control">Inserir</button>
+</form>

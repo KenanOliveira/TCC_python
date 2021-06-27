@@ -1,0 +1,27 @@
+<title>Cadastrar Usuário</title>
+
+<div class="alert alert-danger alert-dismissible fade show" ng-show="erro" role="alert">
+    <strong>{{erro}}</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<div class="alert alert-success alert-dismissible fade show" ng-show="mensagem" role="alert">
+    <strong>{{mensagem}}</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<form class="form-control user" ng-submit="cadastraUser()">
+    <div class="mb-3 text-center">
+        <label class="form-label oi oi-person"></label>
+        <input ng-model='user' class="form-control" placeholder="Usuário" type="text">
+    </div>
+    <div class="mb-3 text-center">
+        <label class="form-label oi oi-key"></label>
+        <input ng-model='pwd' class="form-control" placeholder="Senha" type="password">
+    </div>
+    <div class="mb-3">
+        <!-- <label class="form-label"></label> -->
+        <input ng-model='pwd_confirme' class="form-control" placeholder="Confirme sua Senha" type="password">
+    </div>
+    <button type="submit" class="btn btn-success form-control">Cadastrar</button>
+</form>

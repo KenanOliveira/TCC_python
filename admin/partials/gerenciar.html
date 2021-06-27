@@ -1,0 +1,37 @@
+<title>Gerenciar</title>
+
+<div class="busca input-group mb-3">
+    <input type="text" ng-model="busca" class="form-control" placeholder="Buscar" ng-keyup="buscar(busca)" aria-label="Buscar">
+    <button class="btn btn-outline-secondary oi oi-magnifying-glass" ng-click="buscar(busca)" type="button"></button>
+</div>
+
+<table class="table table-dark table-hover table-borderless table-striped">
+    <thead class="text-center">
+        <th>Thumbnail</th>
+        <th>Nome</th>
+        <th>Data</th>
+        <th>Atualizar</th>
+        <th>Deletar</th>
+    </thead>
+    <tbody class="text-center">
+        <div class="alert alert-success alert-dismissible fade show" ng-show="deleted" role="alert">
+            <strong>{{deleted}}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <div class="alert alert-danger alert-dismissible fade show" ng-show="mensagem" role="alert">
+            <strong ng-show="aviso">{{aviso}}</strong>{{mensagem}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <div class="alert alert-danger alert-dismissible fade show" ng-show="erro" role="alert">
+            <strong>{{erro}}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <tr ng-repeat="v in videos">
+            <td class="img-td"><img class="img-thumbnail" ng-src="{{v.linkImg}}" alt="Thumbnail">
+            <td><p style="margin-top: 1.2rem;">{{v.titulo}}</p></td>
+            <td><p style="margin-top: 1.2rem;">{{v.dataPublicacao | date:"dd/MM/yyyy HH:mm"}}</p></td>
+            <td><button style="margin-top: 1.2rem;" ng-click="atualizaVideo(v._id)" class="btn btn-link oi oi-pencil"></button></td>
+            <td><button style="margin-top: 1.2rem;" ng-click="deletaVideo(v._id)" class="btn btn-link oi oi-trash"></button></td>
+        </tr>
+    </tbody>
+</table>
