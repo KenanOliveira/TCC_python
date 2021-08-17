@@ -102,3 +102,12 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Vendors
+.vendors/
+
+# Yarn lock
+.yarn.lock
+
+# Cache python
+.__pycache__/
