@@ -1,0 +1,19 @@
+<title>Assistindo {{video.titulo}}</title>
+
+<div class="row">
+    <div class="col">
+        <div class="card">
+            <!-- <a ng-href="#!/assistir/{{v._id}}"><img ng-src="{{v.linkImg}}" class="card-img-top" alt="..."></a> -->
+            <div class="card-body">
+                <iframe src="{{trustSrc(video.link)}}" title="{{video.titulo}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<div class="card">
+    <div class="card-header">Descrição</div>
+    <div class="card-body">
+        <p class="card-text">{{video.descricao}}</p>
+    </div>
+</div>

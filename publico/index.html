@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="site" ng-controller="buscaCtrl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.css">
+    <script src="vendors/bootstrap/dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="oi/font/css/open-iconic-bootstrap.css">
+</head>
+<body class="container">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Inicio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="input-group pesquisa">
+                    <div class="form-floating">
+                        <input style="height: 4vw;" ng-model="busca" type="text" class="form-control" placeholder="Pesquise aqui" id="floating">
+                        <label for="floating">Pesquise aqui</label>
+                    </div>
+                    <button ng-click="pesquisar(busca)" class="btn btn-outline-secondary oi oi-magnifying-glass" type="button"></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div ng-view></div>
+    <footer>
+        <div class="copy">&copy; Direitos reservados</div>
+        <div class="icones"><a href="http://youtube.com"><img src="https://image.flaticon.com/icons/png/512/1384/1384060.png" alt="youtube"></a></div>
+    </footer>
+    <script src="vendors/angular/angular.js"></script>
+    <script src="vendors/angular-route/angular-route.js"></script>
+    <script src="vendors/angular-sanitize/angular-sanitize.js"></script>
+    <script src="js/rotas.js"></script>
+    <script src="js/controllers/inicio.js"></script>
+    <script src="js/controllers/assistir.js"></script>
+    <script src="js/controllers/buscar.js"></script>
+</body>
+</html>

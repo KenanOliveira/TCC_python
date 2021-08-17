@@ -1,0 +1,76 @@
+.navbar {
+    margin-bottom: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: #212529;
+}
+
+iframe {
+    width: 80vw;
+    height: 50vw;
+    margin-left: -5px;
+}
+
+body{
+    height: 660px;
+}
+
+.pesquisa {
+    width: 400px;
+    margin-left: 51vw;
+}
+
+.pesquisa div input {
+    border-radius: 0%;
+    margin-top: 0.5%;
+}
+
+.pesquisa button {
+    border: 0;
+    height: 4vw;
+    width: 3vw;
+}
+
+.img img{
+    width: 200px;
+    /* margin-right: -100px; */
+}
+
+.img{
+    margin-right: -30px;
+}
+
+footer {
+    color: #c0c0c0;
+    margin-top: 3vw;
+    height: 50px;
+    background-color: black;
+    width: 100%;
+}
+
+.copy{
+    vertical-align: middle;
+    display: inline-block;
+    line-height: normal;
+    margin-top: 1.5vw;
+    float: left;
+}
+
+.icones img{
+    height: 49px;
+    margin-left: 10px;
+    margin-top: 0.1vw;
+}
+.icones a img:hover{
+    transition: .5s;
+}
+
+.icones a img:hover{
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+}

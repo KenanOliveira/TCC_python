@@ -1,0 +1,14 @@
+<div class="card mb-1" style="max-width: 540px;" ng-repeat="b in busca">
+    <div class="row g-0">
+        <div class="img col-md-5">
+            <a href="#!/assistir/{{b._id}}"><img ng-src="{{b.linkImg}}" alt="{{b.titulo}}"></a>
+        </div>
+        <div class="col-md-7">
+            <div class="card-body">
+                <a href="#!/assistir/{{b_id}}"><h5 class="card-title">{{b.titulo}}</h5></a>
+                <!-- <p class="card-text">{{b.descricao}}</p> -->
+                <p class="card-text"><small class="text-muted">{{b.dataPublicacao | date:"dd/MM/yyyy"}}</small></p>
+            </div>
+        </div>
+    </div>
+</div>
